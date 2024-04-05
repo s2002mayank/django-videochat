@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- to access static files -->
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}    Base_template   {% endblock %}
+    </title>
+    <!-- static template tag -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}"> 
+    <!-- <script src=""></script> -->
+</head>
+<body>        
+    {% block content%}
+    <p>base template: This has a 1. Title and 2. Content block</p>
+    {% endblock %}
+</body>
+</html>
